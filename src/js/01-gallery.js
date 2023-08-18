@@ -31,7 +31,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
 });
 
 
-galleryEl.insertAdjacentHTML('beforeend', galleryMarkup);
+galleryEl.insertAdjacentHTML('beforeend', makeNewGallery);
 
 
 function createGalleryItemsMarkup(items) {
