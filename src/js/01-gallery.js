@@ -1,10 +1,11 @@
-// Add imports above this line
 import { galleryItems } from './gallery-items';
-// Change code below this line
+
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
+
 const galleryEl = document.querySelector('.gallery');
+
 
 const galleryMarkup = galleryItems
   .map(({ preview, original, description }) => {
@@ -16,7 +17,9 @@ const galleryMarkup = galleryItems
   })
   .join('');
 
+
 galleryEl.innerHTML = galleryMarkup;
+
 
 const lightbox = new SimpleLightbox('.gallery a', {
   /* options */
