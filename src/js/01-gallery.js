@@ -5,10 +5,9 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 
 const galleryEl = document.querySelector('.gallery');
-const galleryMarkup = createGalleryItemsMarkup(galleryItems);
 
 
-const galleryMarkup = galleryItems
+const galleryMark = galleryItems
   .map(({ preview, original, description }) => {
     return `<li class="gallery__item">
   <a class="gallery__link" href="${original}">
@@ -19,7 +18,7 @@ const galleryMarkup = galleryItems
   .join('');
 
 
-galleryEl.innerHTML = galleryMarkup;
+galleryEl.innerHTML = galleryMark;
 
 
 const lightbox = new SimpleLightbox('.gallery a', {
