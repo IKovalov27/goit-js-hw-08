@@ -7,7 +7,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 const galleryEl = document.querySelector('.gallery');
 
 
-const galleryMark = galleryItems
+const makeNewGallery = galleryItems
   .map(({ preview, original, description }) => {
     return `<li class="gallery__item">
   <a class="gallery__link" href="${original}">
@@ -18,7 +18,7 @@ const galleryMark = galleryItems
   .join('');
 
 
-galleryEl.innerHTML = galleryMark;
+galleryEl.innerHTML = makeNewGallery;
 
 
 const lightbox = new SimpleLightbox('.gallery a', {
